@@ -2,15 +2,14 @@
 current_score = 100
 def update_score(current_score):
     new_score = current_score - 10
-    if new_score < 0:
-        return 0
+    return max(0, new_score)
 def get_rating(final_score):
    if final_score >= 80:
-       return "Excellent"
+       return "Wow your a genius you scored a Excellent"
    elif final_score >= 50:
-       return "Good"
+       return "Hey its alright with a little practice you will be perfect you scored a Good"
    else:
-       return "Keep Practicing"
+       return "Woah maybe your not fit for this game you scored a Poor"
 if __name__ == "__main__":
     test_score = 100
     print(f"Starting Score {test_score}")
