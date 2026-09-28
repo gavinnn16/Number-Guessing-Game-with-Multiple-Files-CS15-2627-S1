@@ -1,5 +1,5 @@
-from utils import generate_secret_number, check_user_guess
-from score import update_score, get_rating
+from utils import *
+from score import *
 
 secret_number = generate_secret_number()
 player_score = 100
@@ -10,4 +10,4 @@ while True:
         print(f"Rating: {get_rating(player_score)}")
         break
     else:
-        player_score = update_score(player_score)
+        player_score = calculate_new_score(player_score)
